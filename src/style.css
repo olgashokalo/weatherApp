@@ -1,0 +1,94 @@
+ul {
+  list-style: none;
+}
+.card {
+  font-size: 20px;
+  border-radius: 15px;
+  max-width: 850px;
+  border-radius: 5px;
+  border: 1px solid #dadde1;
+  display: block;
+  margin: 0px auto;
+  margin-top: 20px;
+  background: linear-gradient(
+    180.3deg,
+    rgb(221, 221, 221) 5.5%,
+    rgb(110, 136, 161) 90.2%
+  );
+  padding: 20px 0px 20px 20px;
+}
+
+.col {
+  font-style: italic;
+  font-size: 20px;
+  color: #dddddd;
+}
+.actual-temperature {
+  font-size: 40px;
+  font-style: normal;
+  color: #dddddd;
+  margin-top: 20px;
+}
+.fa-solid {
+  font-size: 40px;
+  opacity: 60%;
+}
+.col-6 {
+  font-size: 20px;
+}
+.search,
+.city,
+button {
+  font-weight: 450px;
+  background-color: white;
+  color: #6e88a0;
+  border: #dddddd;
+  font-size: 18px;
+  box-shadow: 5px 5px 5px rgb(0 0 0 / 20%);
+  border-radius: 3px;
+  padding: 1px 5px;
+  text-align: left;
+}
+button {
+  margin-top: 5px;
+  color: gray;
+}
+.city {
+  width: 200px;
+}
+button,
+.search {
+  width: 140px;
+}
+.units {
+  position: relative;
+  top: -14px;
+  font-style: normal;
+}
+.col-4 {
+  font-size: 20px;
+}
+#now {
+  margin-top: 7px;
+  margin-left: 0px;
+}
+#currentCityName {
+  font-weight: bold;
+}
+#currentDate,
+#currentTime,
+#currentDay {
+  font-style: italic;
+  font-size: 20px;
+}
+#celsius-link,
+#fahrenheit-link {
+  text-decoration: none;
+}
+#currentIcon {
+  padding-left: 0px;
+}
+#icon-description {
+  font-size: 18px;
+  opacity: 60%;
+}
