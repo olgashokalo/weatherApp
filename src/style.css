@@ -92,3 +92,7 @@ button,
   font-size: 18px;
   opacity: 60%;
 }
+#gitHubLink {
+  font-size: 15px;
+  margin: 15px 0px 0px 133px;
+}
