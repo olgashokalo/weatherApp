@@ -1,4 +1,45 @@
+function formatDate(timestamp) {
+  let now = new Date(timestamp);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  let Day = days[now.getDay()];
+  let Month = months[now.getMonth()];
+  let hour = now.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minute = now.getMinutes();
+  if (minute < 10) {
+    minute = `0${minute}`;
+  }
+  return `${Day},${Month} ${now.getDate()}, ${hour}:${minute}`;
+}
+
 function showWeather(response) {
+  console.log(response);
   document.querySelector("#currentCityName").innerHTML = response.data.name;
   document.querySelector("#currentTemperature").innerHTML = Math.round(
     response.data.main.temp
@@ -11,6 +52,9 @@ function showWeather(response) {
   );
   document.querySelector("#icon-description").innerHTML =
     response.data.weather[0].description;
+  document.querySelector("#currentTime").innerHTML = formatDate(
+    response.data.dt * 1000
+  );
 }
 function search(city) {
   let apiKey = "48fa985e45676fd8f85f51b35990c0e0";
@@ -26,46 +70,6 @@ function LetUsGo(event) {
 
 let cit = document.querySelector("#input-form");
 cit.addEventListener("submit", LetUsGo);
-
-let now = new Date();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-
-let months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-let Day = days[now.getDay()];
-let Month = months[now.getMonth()];
-let hour = now.getHours();
-if (hour < 10) {
-  hour = `0${hour}`;
-}
-let minute = now.getMinutes();
-if (minute < 10) {
-  minute = `0${minute}`;
-}
-currentDay.innerHTML = `${Day}`;
-currentDate.innerHTML = `${Month} ${now.getDate()}`;
-currentTime.innerHTML = `${hour}:${minute}`;
 
 function showCelsius(event) {
   let celsiusTemp = document.querySelector("#celsius-link");
