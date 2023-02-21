@@ -91,4 +91,5 @@ button,
 #icon-description {
   font-size: 18px;
   opacity: 60%;
+  text-transform: capitalize;
 }

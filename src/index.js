@@ -1,6 +1,4 @@
 function showWeather(response) {
-  console.log(response.data);
-  console.log(response.data.main.temp);
   document.querySelector("#currentCityName").innerHTML = response.data.name;
   document.querySelector("#currentTemperature").innerHTML = Math.round(
     response.data.main.temp
@@ -12,7 +10,7 @@ function showWeather(response) {
     response.data.wind.speed
   );
   document.querySelector("#icon-description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
 }
 function search(city) {
   let apiKey = "48fa985e45676fd8f85f51b35990c0e0";
