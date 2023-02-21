@@ -75,11 +75,11 @@ button,
 #currentCityName {
   font-weight: bold;
 }
+#currentDateInfo,
 #currentDate,
 #currentTime,
 #currentDay {
-  font-style: italic;
-  font-size: 20px;
+  font-size: 15px;
 }
 #celsius-link,
 #fahrenheit-link {
@@ -91,5 +91,7 @@ button,
 #icon-description {
   font-size: 18px;
   opacity: 60%;
+}
+#icon-description:first-letter {
   text-transform: capitalize;
 }
