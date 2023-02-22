@@ -32,9 +32,6 @@ ul {
   font-size: 40px;
   opacity: 60%;
 }
-.col-6 {
-  font-size: 20px;
-}
 .search,
 .city,
 button {
@@ -68,12 +65,13 @@ button,
   font-size: 20px;
 }
 
-#now {
+#icon-now {
   margin-top: 7px;
   margin-left: 0px;
 }
 #currentCityName {
   font-weight: bold;
+  font-size: 30px;
 }
 #currentDateInfo,
 #currentDate,
@@ -94,4 +92,7 @@ button,
 }
 #icon-description:first-letter {
   text-transform: capitalize;
+}
+li {
+  font-size: 17px;
 }
