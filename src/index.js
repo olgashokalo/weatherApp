@@ -43,6 +43,9 @@ function showWeather(response) {
   document.querySelector("#currentTemperature").innerHTML = Math.round(
     response.data.temperature.current
   );
+  document.querySelector("#feels-like").innerHTML = Math.round(
+    response.data.temperature.feels_like
+  );
   document.querySelector("#humidity").innerHTML = Math.round(
     response.data.temperature.humidity
   );
