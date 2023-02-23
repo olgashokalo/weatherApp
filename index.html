@@ -21,113 +21,117 @@
         <div class="card">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-8">
                         <form id="input-form">
-                            <input class="city" id="input-city" type="text" placeholder="Enter the city" autofocus />
+                            <input class="city" id="input-city" type="text" placeholder="Enter the city..." autofocus />
                     </div>
-                    <div class="col-3">
-                        <input class="search" type="submit" value="Let's go" />
+                    <div class="col-1">
+                        <button type="submit" class="btn btn-outline-secondary" id="button-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        </form>
                     </div>
-                </div>
-                </form>
-                <div class="row">
-                    <div class="col-3">
-                    </div>
-                    <div class="col-3">
-                        <button class="w-300" id="currentLocationResult">
-                            Current location
+                    <div class="col-1">
+                        <button class="btn btn-outline-secondary" id="currentLocationResult">
+                            <i class="fa-solid fa-location-arrow"></i>
                         </button>
                     </div>
                 </div>
+            </div>
+            </br>
+            <div class="row">
+                <div class="col-3">
+                    <ul id="currentIcon">
+                        <li>
+                            <img src="" alt="" id="icon-now">
+                        </li>
+                </div>
+                <div class="col-6">
+                    <ul>
+                        <li id="currentCityName">
+                        </li>
+                        <li id="currentDateInfo"> Last updated: <span id="currentDay"> </span>
+
+                            <span id="currentDate">
+                            </span>
+                            <span id="currentTime">
+                            </span>
+                        </li>
+                        <li id="icon-description">
+                        </li>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8">
+                </div>
+                <div class="col-3">
+                    <ul>
+                        <li>
+                            Feels like: <span id="feels-like"></span>°C
+                        </li>
+                        <li>
+                            Humidity: <span id="humidity"></span>%
+                        </li>
+                        <li>
+                            Wind: <span id="wind"></span>km/h
+                        </li>
+                    </ul>
+                </div>
                 </br>
                 <div class="row">
-                    <div class="col-3">
-                        <ul id="currentIcon">
-                            <li>
-                                <img src="" alt="" id="icon-now">
-                            </li>
-                            <li id="icon-description">
-                            </li>
+                    <div class="col">
+                        <span class="actual-temperature" id="currentTemperature">
+                        </span>
+                        <span class="units">
+                            <a href="#" id="celsius-link"> ℃ </a> | <a href="#" id="fahrenheit-link"> °F</a>
+                        </span>
                     </div>
-                    <div class="col-6">
-                        <ul>
-                            <li id="currentCityName">
-                            </li>
-                            <li id="currentDateInfo"> Last updated: <span id="currentDay"> </span>
-
-                                <span id="currentDate">
-                                </span>
-                                <span id="currentTime">
-                                </span>
-                            </li>
+                    <div class="col">
+                        Mon
+                        </br>
+                        <i class="fa-solid fa-sun"></i>
+                        </br>
+                        30°/22°
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-7">
+                    <div class="col">
+                        Tue
+                        </br>
+                        <i class="fa-solid fa-cloud"></i>
+                        </br>
+                        27°/20°
                     </div>
-                    <div class="col-4">
-                        <ul>
-                            <li>
-                                Humidity: <span id="humidity">82</span>%
-                            </li>
-                            <li>
-                                Wind: <span id="wind">5</span>km/h
-                            </li>
-                        </ul>
+                    <div class="col">
+                        Wed
+                        </br>
+                        <i class="fa-solid fa-cloud-sun"></i>
+                        </br>
+                        22°/17°
                     </div>
-                    </br>
-                    <div class="row">
-                        <div class="col">
-                            <span class="actual-temperature" id="currentTemperature">
-                            </span>
-                            <span class="units">
-                                <a href="#" id="celsius-link"> ℃ </a> | <a href="#" id="fahrenheit-link"> °F</a> </span>
-                        </div>
-                        <div class="col">
-                            Mon
-                            </br>
-                            <i class="fa-solid fa-sun"></i>
-                            </br>
-                            30°/22°
-                        </div>
-                        <div class="col">
-                            Tue
-                            </br>
-                            <i class="fa-solid fa-cloud"></i>
-                            </br>
-                            27°/20°
-                        </div>
-                        <div class="col">
-                            Wed
-                            </br>
-                            <i class="fa-solid fa-cloud-sun"></i>
-                            </br>
-                            22°/17°
-                        </div>
-                        <div class="col">
-                            Thu
-                            </br>
-                            <i class="fa-solid fa-cloud-sun-rain"></i>
-                            </br>
-                            24°/16°
-                        </div>
-                        <div class="col">
-                            Fri
-                            </br>
-                            <i class="fa-solid fa-sun"></i>
-                            </br>
-                            28°/19°
-                        </div>
+                    <div class="col">
+                        Thu
+                        </br>
+                        <i class="fa-solid fa-cloud-sun-rain"></i>
+                        </br>
+                        24°/16°
+                    </div>
+                    <div class="col">
+                        Fri
+                        </br>
+                        <i class="fa-solid fa-sun"></i>
+                        </br>
+                        28°/19°
                     </div>
                 </div>
             </div>
         </div>
-        <small>
-            <a href="https://github.com/olgashokalo/weatherApp" target="_blank"> Open-source code</a> by Olga Shokalo
-        </small>
+    </div>
+    <small>
+        <a href="https://github.com/olgashokalo/weatherApp" target="_blank"> Open-source code</a> by Olga
+        Shokalo
+    </small>
 
-        <script src="src/index.js">
-        </script>
+    <script src="src/index.js">
+    </script>
 </body>
 
 </html>
