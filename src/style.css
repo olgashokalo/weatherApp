@@ -28,34 +28,24 @@ ul {
   color: #dddddd;
   margin-top: 20px;
 }
-.fa-solid {
-  font-size: 40px;
-  opacity: 60%;
-}
-.search,
+
 .city,
 button {
-  font-weight: 450px;
-  background-color: white;
-  color: #6e88a0;
-  border: #dddddd;
+  background-color: whitesmoke;
+  border: 1px;
   font-size: 18px;
   box-shadow: 5px 5px 5px rgb(0 0 0 / 20%);
-  border-radius: 3px;
+  border-radius: 5px;
   padding: 1px 5px;
   text-align: left;
 }
-button {
-  margin-top: 5px;
-  color: gray;
-}
+
 .city {
-  width: 200px;
+  height: 35px;
+  font-weight: 250;
+  width: 500px;
 }
-button,
-.search {
-  width: 140px;
-}
+
 .units {
   position: relative;
   top: -14px;
@@ -66,18 +56,19 @@ button,
 }
 
 #icon-now {
-  margin-top: 7px;
-  margin-left: 0px;
+  position: relative;
+  top: -10px;
 }
 #currentCityName {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 35px;
 }
 #currentDateInfo,
 #currentDate,
 #currentTime,
-#currentDay {
-  font-size: 15px;
+#currentDay,
+#icon-description {
+  font-size: 17px;
 }
 #celsius-link,
 #fahrenheit-link {
@@ -86,13 +77,10 @@ button,
 #currentIcon {
   padding-left: 0px;
 }
-#icon-description {
-  font-size: 18px;
-  opacity: 60%;
-}
+
 #icon-description:first-letter {
   text-transform: capitalize;
 }
 li {
-  font-size: 17px;
+  font-size: 16px;
 }
