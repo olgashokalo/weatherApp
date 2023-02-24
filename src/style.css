@@ -22,6 +22,9 @@ ul {
   font-size: 20px;
   color: #dddddd;
 }
+.col-1 {
+  padding-left: 0px;
+}
 .actual-temperature {
   font-size: 40px;
   font-style: normal;
@@ -44,6 +47,7 @@ button {
   height: 35px;
   font-weight: 250;
   width: 500px;
+  margin-right: 0px;
 }
 
 .units {
@@ -83,4 +87,9 @@ button {
 }
 li {
   font-size: 16px;
+}
+
+.units .active {
+  cursor: default;
+  color: rgb(64, 60, 60);
 }
