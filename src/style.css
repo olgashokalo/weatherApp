@@ -6,9 +6,7 @@ ul {
   max-width: 850px;
   border-radius: 5px;
   border: 1px solid #dadde1;
-  display: block;
-  margin: 0px auto;
-  margin-top: 20px;
+  margin-top: 30px;
   background: linear-gradient(
     180.3deg,
     rgb(221, 221, 221) 5.5%,
@@ -16,20 +14,23 @@ ul {
   );
   padding: 20px 0px 20px 20px;
 }
+.container {
+  margin-left: 150px;
+}
 
-.col {
+.weather-forecast {
+  margin-top: 20px;
   font-style: italic;
   font-size: 20px;
   color: #dddddd;
+  margin-left: 90px;
 }
-.col-1 {
-  padding-left: 0px;
-}
+
 .actual-temperature {
-  font-size: 40px;
+  font-size: 55px;
   font-style: normal;
   color: #dddddd;
-  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .city,
@@ -52,7 +53,7 @@ button {
 
 .units {
   position: relative;
-  top: -14px;
+  top: -25px;
   font-style: normal;
 }
 .col-4 {

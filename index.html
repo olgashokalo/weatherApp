@@ -17,6 +17,7 @@
 </head>
 
 <body>
+
     <div class="container">
         <div class="card">
             <div class="card-body">
@@ -62,8 +63,16 @@
                 </div>
             </div>
             <div class="row">
+
                 <div class="col-8">
+                    <span class="actual-temperature" id="currentTemperature">
+                    </span>
+                    <span class="units">
+                        <a href="#" id="celsius-link" class="active"> ℃ </a> | <a href="#" id="fahrenheit-link">
+                            °F</a>
+                    </span>
                 </div>
+
                 <div class="col-3">
                     <ul>
                         <li>
@@ -77,60 +86,22 @@
                         </li>
                     </ul>
                 </div>
-                </br>
-                <div class="row">
-                    <div class="col">
-                        <span class="actual-temperature" id="currentTemperature">
-                        </span>
-                        <span class="units">
-                            <a href="#" id="celsius-link" class="active"> ℃ </a> | <a href="#" id="fahrenheit-link">
-                                °F</a>
-                        </span>
-                    </div>
-                    <div class="col">
-                        Mon
-                        </br>
-                        <i class="fa-solid fa-sun"></i>
-                        </br>
-                        30°/22°
-                    </div>
-                    <div class="col">
-                        Tue
-                        </br>
-                        <i class="fa-solid fa-cloud"></i>
-                        </br>
-                        27°/20°
-                    </div>
-                    <div class="col">
-                        Wed
-                        </br>
-                        <i class="fa-solid fa-cloud-sun"></i>
-                        </br>
-                        22°/17°
-                    </div>
-                    <div class="col">
-                        Thu
-                        </br>
-                        <i class="fa-solid fa-cloud-sun-rain"></i>
-                        </br>
-                        24°/16°
-                    </div>
-                    <div class="col">
-                        Fri
-                        </br>
-                        <i class="fa-solid fa-sun"></i>
-                        </br>
-                        28°/19°
-                    </div>
-                </div>
+            </div>
+            </br>
+
+            <div class="weather-forecast" id="forecast">
+
+
             </div>
         </div>
-    </div>
-    <small>
-        <a href="https://github.com/olgashokalo/weatherApp" target="_blank"> Open-source code</a> by Olga
-        Shokalo
-    </small>
 
+
+        <small>
+            <a href="https://github.com/olgashokalo/weatherApp" target="_blank"> Open-source code</a> by Olga
+            Shokalo
+        </small>
+    </div>
+    </div>
     <script src="src/index.js">
     </script>
 </body>

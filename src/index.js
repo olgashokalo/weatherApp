@@ -116,4 +116,29 @@ let celsiusTemperature = null;
 let curLocRes = document.querySelector("#currentLocationResult");
 curLocRes.addEventListener("click", showCurrentPosition);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+                    <div class="col-2">
+                        <div class="weather-forecast-day"> ${day}</div>
+
+                        <img src="" alt="" width="42">
+
+                        <div class="weather-forecast-temperatures">
+                            <span class="weather-forecast-temperature-max">30° / </span>
+                            <span class="weather-forecast-temperature-min">22°</span>
+                        </div>
+                    </div>
+              `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 search("London");
+displayForecast();
