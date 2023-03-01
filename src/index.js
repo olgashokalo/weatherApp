@@ -38,6 +38,13 @@ function formatDate(timestamp) {
   return `${Day},${Month} ${now.getDate()}, ${hour}:${minute}`;
 }
 
+function getForecast(coords) {
+  console.log(coords);
+  let apiKey = "3632a7c9224763143fe6obtb61dff025";
+  let apiUrl = ` https://api.shecodes.io/weather/v1/forecast?lon=${coords.longitude}&lat=${coords.latitude}&key=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
 function showWeather(response) {
   celsiusTemperature = response.data.temperature.current;
   document.querySelector("#currentCityName").innerHTML = response.data.city;
@@ -64,7 +71,10 @@ function showWeather(response) {
   document
     .querySelector("#icon-now")
     .setAttribute("alt", response.data.condition.description);
+
+  getForecast(response.data.coordinates);
 }
+
 function search(city) {
   let apiKey = "3632a7c9224763143fe6obtb61dff025";
   let units = "metric";
@@ -116,29 +126,48 @@ let celsiusTemperature = null;
 let curLocRes = document.querySelector("#currentLocationResult");
 curLocRes.addEventListener("click", showCurrentPosition);
 
-function displayForecast() {
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
+function displayForecast(response) {
+  console.log(response);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
-                    <div class="col-2">
-                        <div class="weather-forecast-day"> ${day}</div>
 
-                        <img src="" alt="" width="42">
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
+                    <div class="col-2">
+                        <div class="weather-forecast-day"> ${formatDay(
+                          forecastDay.time
+                        )}</div>
+                        
+                        <img src= ${
+                          forecastDay.condition.icon_url
+                        } alt="" width="42">
 
                         <div class="weather-forecast-temperatures">
-                            <span class="weather-forecast-temperature-max">30° / </span>
-                            <span class="weather-forecast-temperature-min">22°</span>
+                            <span class="weather-forecast-temperature-max"> ${Math.round(
+                              forecastDay.temperature.maximum
+                            )}° / </span>
+                            <span class="weather-forecast-temperature-min">${Math.round(
+                              forecastDay.temperature.minimum
+                            )}°</span>
                         </div>
                     </div>
               `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
 search("London");
-displayForecast();

@@ -19,11 +19,12 @@ ul {
 }
 
 .weather-forecast {
-  margin-top: 20px;
+  margin-top: 15px;
   font-style: italic;
   font-size: 20px;
   color: #dddddd;
-  margin-left: 90px;
+  margin-left: 50px;
+  margin-bottom: 20px;
 }
 
 .actual-temperature {
