@@ -1,6 +1,9 @@
 ul {
   list-style: none;
 }
+li {
+  font-size: 16px;
+}
 .card {
   font-size: 20px;
   max-width: 850px;
@@ -12,28 +15,22 @@ ul {
     rgb(221, 221, 221) 5.5%,
     rgb(110, 136, 161) 90.2%
   );
-  padding: 20px 0px 20px 20px;
+  padding: 20px;
 }
 .container {
   margin-left: 150px;
 }
-
 .weather-forecast {
-  margin-top: 15px;
   font-style: italic;
   font-size: 20px;
   color: #dddddd;
-  margin-left: 50px;
-  margin-bottom: 20px;
+  margin: 15px 0px 20px 50px;
 }
-
 .actual-temperature {
-  font-size: 55px;
-  font-style: normal;
+  font-size: 60px;
   color: #dddddd;
   margin-left: 20px;
 }
-
 .city,
 button {
   background-color: whitesmoke;
@@ -44,23 +41,15 @@ button {
   padding: 1px 5px;
   text-align: left;
 }
-
 .city {
   height: 36px;
   font-weight: 250;
   width: 500px;
-  margin-right: 0px;
 }
-
 .units {
   position: relative;
-  top: -25px;
-  font-style: normal;
+  top: -27px;
 }
-.col-4 {
-  font-size: 20px;
-}
-
 #icon-now {
   position: relative;
   top: -10px;
@@ -83,14 +72,9 @@ button {
 #currentIcon {
   padding-left: 0px;
 }
-
 #icon-description:first-letter {
   text-transform: capitalize;
 }
-li {
-  font-size: 16px;
-}
-
 .units .active {
   cursor: default;
   color: rgb(64, 60, 60);

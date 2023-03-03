@@ -39,10 +39,8 @@ function formatDate(timestamp) {
 }
 
 function getForecast(coords) {
-  console.log(coords);
   let apiKey = "3632a7c9224763143fe6obtb61dff025";
   let apiUrl = ` https://api.shecodes.io/weather/v1/forecast?lon=${coords.longitude}&lat=${coords.latitude}&key=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 function showWeather(response) {
@@ -97,7 +95,7 @@ function showCelsius(event) {
   currentTemperature.innerHTML = Math.round(celsiusTemperature);
 }
 function showFar(event) {
-  event.preventDefault;
+  event.preventDefault();
   let temperatureElement = document.querySelector("#currentTemperature");
   temperatureCelsius.classList.remove("active");
   temperatureFar.classList.add("active");
@@ -135,7 +133,6 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
-  console.log(response);
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
