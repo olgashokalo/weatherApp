@@ -49,6 +49,7 @@ button {
 .units {
   position: relative;
   top: -27px;
+  color: rgb(64, 60, 60);
 }
 #icon-now {
   position: relative;
@@ -65,17 +66,9 @@ button {
 #icon-description {
   font-size: 17px;
 }
-#celsius-link,
-#fahrenheit-link {
-  text-decoration: none;
-}
 #currentIcon {
   padding-left: 0px;
 }
 #icon-description:first-letter {
   text-transform: capitalize;
-}
-.units .active {
-  cursor: default;
-  color: rgb(64, 60, 60);
 }

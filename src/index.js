@@ -88,27 +88,6 @@ function LetUsGo(event) {
 let cit = document.querySelector("#input-form");
 cit.addEventListener("submit", LetUsGo);
 
-function showCelsius(event) {
-  let temperatureElement = document.querySelector("#currentTemperature");
-  temperatureCelsius.classList.add("active");
-  temperatureFar.classList.remove("active");
-  currentTemperature.innerHTML = Math.round(celsiusTemperature);
-}
-function showFar(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#currentTemperature");
-  temperatureCelsius.classList.remove("active");
-  temperatureFar.classList.add("active");
-  let farenheitTemp = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(farenheitTemp);
-}
-
-let temperatureCelsius = document.querySelector("#celsius-link");
-temperatureCelsius.addEventListener("click", showCelsius);
-
-let temperatureFar = document.querySelector("#fahrenheit-link");
-temperatureFar.addEventListener("click", showFar);
-
 function searchPosition(position) {
   let apiKey = "3632a7c9224763143fe6obtb61dff025";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${position.coords.longitude}&lat=${position.coords.latitude}&key=${apiKey}&units=metric`;
@@ -145,7 +124,7 @@ function displayForecast(response) {
                     <div class="col-2">
                         <div class="weather-forecast-day"> ${formatDay(
                           forecastDay.time
-                        )}</div>
+                        )} </div>
                         
                         <img src= ${
                           forecastDay.condition.icon_url
