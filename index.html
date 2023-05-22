@@ -21,70 +21,72 @@
         <div class="card">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-6">
                         <form id="input-form">
                             <input class="city form-control" id="input-city" type="search"
                                 placeholder="Enter the city..." autofocus />
                     </div>
-                    <div class="col-1">
+                    <div class="col-5">
                         <button type="submit" class="btn btn-outline-secondary" id="button-search">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
-                        </form>
-                    </div>
-                    <div class="col-1">
+
+
+
                         <button class="btn btn-outline-secondary" id="currentLocationResult">
-                            <i class="fa-solid fa-location-arrow"></i>
+                            <i class="fa-sharp fa-solid fa-location-dot"></i>
                         </button>
+
                     </div>
                 </div>
-            </div>
-            </br>
-            <div class="row">
-                <div class="col-3">
-                    <ul id="currentIcon">
-                        <li>
-                            <img src="" alt="" id="icon-now">
-                        </li>
+                </form>
+                </br>
+                <div class="row">
+                    <div class="col-3">
+                        <ul id="currentIcon">
+                            <li>
+                                <img src="" alt="" id="icon-now">
+                            </li>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li id="currentCityName">
+                            </li>
+                            <li id="currentDateInfo"> <span id="currentDay"> </span>
+                                <span id="currentDate">
+                                </span>
+                                <span id="currentTime">
+                                </span>
+                            </li>
+                            <li id="icon-description">
+                            </li>
+                    </div>
                 </div>
-                <div class="col-6">
-                    <ul>
-                        <li id="currentCityName">
-                        </li>
-                        <li id="currentDateInfo"> Last updated: <span id="currentDay"> </span>
-                            <span id="currentDate">
-                            </span>
-                            <span id="currentTime">
-                            </span>
-                        </li>
-                        <li id="icon-description">
-                        </li>
+                <div class="row mt-3">
+                    <div class="col-5">
+                        <span class="actual-temperature" id="currentTemperature">
+                        </span>
+                        <span class="units">
+                            ℃
+                        </span>
+                    </div>
+                    <div class="col-7">
+                        <ul>
+                            <li>
+                                Feels like: <span id="feels-like"></span>°C
+                            </li>
+                            <li>
+                                Humidity: <span id="humidity"></span>%
+                            </li>
+                            <li>
+                                Wind: <span id="wind"></span>km/h
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-8">
-                    <span class="actual-temperature" id="currentTemperature">
-                    </span>
-                    <span class="units">
-                        ℃
-                    </span>
+                </br>
+                <div class="weather-forecast" id="forecast">
                 </div>
-                <div class="col-3">
-                    <ul>
-                        <li>
-                            Feels like: <span id="feels-like"></span>°C
-                        </li>
-                        <li>
-                            Humidity: <span id="humidity"></span>%
-                        </li>
-                        <li>
-                            Wind: <span id="wind"></span>km/h
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            </br>
-            <div class="weather-forecast" id="forecast">
             </div>
         </div>
         <small>

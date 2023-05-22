@@ -6,7 +6,7 @@ li {
 }
 .card {
   font-size: 20px;
-  max-width: 850px;
+  max-width: 700px;
   border-radius: 5px;
   border: 1px solid #dadde1;
   margin-top: 30px;
@@ -71,4 +71,32 @@ button {
 }
 #icon-description:first-letter {
   text-transform: capitalize;
+}
+#input-city {
+  max-width: 300px;
+}
+@media (max-width: 576px) {
+  #input-city {
+    max-width: 150px;
+  }
+  #currentCityName {
+    font-size: 25px;
+  }
+  button {
+    margin-left: 5px;
+  }
+  li,
+  #currentDateInfo,
+  #currentDate,
+  #currentTime,
+  #currentDay,
+  #icon-description {
+    font-size: 13px;
+  }
+  .actual-temperature {
+    font-size: 40px;
+  }
+  .units {
+    top: -14px;
+  }
 }
