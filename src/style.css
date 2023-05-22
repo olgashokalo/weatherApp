@@ -21,10 +21,11 @@ li {
   margin-left: 150px;
 }
 .weather-forecast {
-  font-style: italic;
   font-size: 20px;
+  font-style: italic;
   color: #dddddd;
-  margin: 15px 0px 20px 50px;
+
+  text-align: center;
 }
 .actual-temperature {
   font-size: 60px;
@@ -77,10 +78,10 @@ button {
 }
 @media (max-width: 576px) {
   #input-city {
-    max-width: 150px;
+    max-width: 140px;
   }
   #currentCityName {
-    font-size: 25px;
+    font-size: 24px;
   }
   button {
     margin-left: 5px;
